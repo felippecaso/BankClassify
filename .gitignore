@@ -75,6 +75,9 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# my work in progress notebook
+fin-template.ipynb
+
 # pyenv
 .python-version
 
