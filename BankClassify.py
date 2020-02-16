@@ -18,13 +18,14 @@ class BankClassify():
 
         self.classifier = NaiveBayesClassifier(self._get_training(self.prev_data), self._extractor)
 
-    def add_data(self, filename):
+    def add_data(self, df):
         """Add new data and interactively classify it.
 
         Arguments:
-         - filename: filename of Santander-format file
+         - df: pd.DataFrame with columns of 'date', 'desc' and 'amount'
         """
-        self.new_data = self._read_santander_file(filename)
+
+        self.new_data = df
 
         self._ask_with_guess(self.new_data)
 
