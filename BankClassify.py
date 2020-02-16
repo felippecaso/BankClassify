@@ -10,7 +10,7 @@ from tabulate import tabulate
 class BankClassify():
 
     def __init__(self, data="fin/AllData.csv"):
-        """Load in the previous data (by default from AllData.csv) and initialise the classifier"""
+        """Load in the previous data (by default from fin/AllData.csv) and initialise the classifier"""
         if os.path.exists(data):
             self.prev_data = pd.read_csv(data)
         else:
