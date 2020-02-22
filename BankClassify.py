@@ -69,7 +69,7 @@ class BankClassify():
         # Initialise colorama
         init()
 
-        df['cat'] = ""
+        df.loc[:, 'cat'] = ""
 
         categories = self._read_categories()
 
