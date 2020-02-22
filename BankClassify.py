@@ -93,7 +93,7 @@ class BankClassify():
             print(cats_table)
             print("\n\n")
             # Print transaction
-            print("On: %s\t %.2f\n%s" % (row['date'], row['amount'], row['desc']))
+            print("On: {}\nAmount: {}\nDescription: {}\nOrigin: {}\n".format(row['date'], row['amount'], row['title'], row['origin']))
             print(Fore.RED  + Style.BRIGHT + "My guess is: " + str(guess) + Fore.RESET)
 
             input_value = input("> ")
@@ -122,7 +122,7 @@ class BankClassify():
                 # Write correct answer
                 df.at[index, 'cat'] = category
                 # Update classifier
-                self.classifier.update([(stripped_text, category)   ])
+                self.classifier.update([(stripped_text, category)])
 
         return df
 
